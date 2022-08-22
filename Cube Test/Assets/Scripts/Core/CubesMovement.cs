@@ -8,7 +8,13 @@ namespace NAP.Core
 	{
 
 		#region Variables
-		public List<GameObject> SpawnedCubes;
+		[Header("Settings:")]
+		[Range(3, 6)]
+		[SerializeField] private float _speedMin;
+		[Range(7, 10)]
+		[SerializeField] private float _speedMax;
+
+		[HideInInspector] public List<GameObject> SpawnedCubes;
 		private bool _active = false;
 		#endregion
 
@@ -26,7 +32,7 @@ namespace NAP.Core
 			foreach (var cube in SpawnedCubes)
 			{
 				Rigidbody cubeRigidbody = cube.GetComponent<Rigidbody>();
-				float speed = Random.Range(1f, 5f);
+				float speed = Random.Range(_speedMin, _speedMax);
 				Vector3 direction = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f) * speed); ;
 				cubeRigidbody.AddForce(direction, ForceMode.Impulse);
 			}

@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 1604429431}
   - component: {fileID: 1604429432}
   - component: {fileID: 1604429433}
+  - component: {fileID: 1604429434}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -364,6 +365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db8438e9d32f004ca4526771eca72e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedMin: 3.99
+  _speedMax: 8.08
   SpawnedCubes: []
 --- !u!114 &1604429432
 MonoBehaviour:
@@ -379,8 +382,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cubesMovement: {fileID: 1604429431}
   _centerPoint: {fileID: 1981550726}
-  _radius: 1
   _cubesCounter: {fileID: 0}
+  _radius: 1
 --- !u!114 &1604429433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,74 +396,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7273647cc313a344e969b2e295ea408c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: {fileID: 102900000, guid: 81af3b756de7d194cb922731b7655ce1, type: 3}
---- !u!1 &1670295514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1670295517}
-  - component: {fileID: 1670295516}
-  - component: {fileID: 1670295515}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1670295515
+  _sceneToLoad: UI
+--- !u!114 &1604429434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670295514}
+  m_GameObject: {fileID: 1604429428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 39d3d0b44f1c6e04ab1c59c50e478e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1670295516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670295514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &1670295517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670295514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1981550725
 GameObject:
   m_ObjectHideFlags: 0

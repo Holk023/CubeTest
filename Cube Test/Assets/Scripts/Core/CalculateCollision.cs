@@ -10,13 +10,13 @@ namespace NAP.Core
 	{
 
 		#region Variables
+		[Header("References:")]
 		[SerializeField] private CubesMovement _cubesMovement;
 		[SerializeField] private Transform _centerPoint;
-
-		[SerializeField] private float _radius;
-		public float Radius => _radius;
-
 		[SerializeField] private CubesCounter _cubesCounter;
+
+		[Header("Settings:")]
+		[SerializeField] private float _radius;
 		#endregion
 
 		private void Start()
@@ -75,8 +75,8 @@ namespace NAP.Core
 				Handles.color = Color.green;
 				Handles.Label(Vector3.Lerp(_centerPoint.position, _cubesMovement.SpawnedCubes[i].transform.position, 0.5f),
 					$"{distanceFromCenterPoint}");
-#endif
 			}
+#endif
 		}
 		private void OnDrawGizmos()
 		{

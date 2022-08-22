@@ -9,12 +9,13 @@ namespace NAP.Core
 	{
 
 		#region Variables
-		public Object _sceneToLoad;
+		[Header("References:")]
+		public string _sceneToLoad;
 		#endregion
 
 		private void Awake()
 		{
-			SceneManager.LoadScene(_sceneToLoad.name, LoadSceneMode.Additive);
+			SceneManager.LoadScene(_sceneToLoad, LoadSceneMode.Additive);
 		}
 	} 
 }

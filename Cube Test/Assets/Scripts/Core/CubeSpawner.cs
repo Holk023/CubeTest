@@ -9,6 +9,7 @@ namespace NAP.Core
 	{
 
 		#region Variables
+		[Header("References:")]
 		[SerializeField] private Camera _mainCamera;
 		[SerializeField] private Transform _centerPoint;
 		[SerializeField] private SpawnSettings _spawnSettings;

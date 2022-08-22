@@ -8,6 +8,11 @@ namespace NAP.Data
 	public class SpawnSettings : ScriptableObject
 	{
 		#region Variables
+		[Header("References:")]
+		[SerializeField] private GameObject _cubePrefab;
+		public GameObject CubePrefab => _cubePrefab;
+
+		[Header("Settings:")]
 		[SerializeField] private float _radiusX;
 		public float RadiusX => _radiusX;
 
@@ -16,9 +21,6 @@ namespace NAP.Data
 
 		[SerializeField] private int _cubesCount;
 		public int CubesCount => _cubesCount;
-
-		[SerializeField] private GameObject _cubePrefab;
-		public GameObject CubePrefab => _cubePrefab;
 		#endregion
 	} 
 

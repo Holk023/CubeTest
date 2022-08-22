@@ -10,10 +10,10 @@ namespace NAP.UI
 	{
 
 		#region Variables
-
-		private int _cubeCount;
+		[Header("References:")]
 		[SerializeField] private TextMeshProUGUI _countText;
 
+		private int _cubeCount;
 		#endregion
 
 		public void SetCubeCount(int count)
